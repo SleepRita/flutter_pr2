@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-  final String title = '';
+  final String title = 'Информация о студенте';
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +32,23 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(title),
       ),
-      body: Center(
+      body: const Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Багаутдинова Маргарита Алексеевна',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'Группа: ИКБО-12-22',
+              style: TextStyle(fontSize: 16),
+            ),
+            Text(
+              'Студенческий билет: 22И0559',
+              style: TextStyle(fontSize: 16),
+            ),
+          ],
         ),
       ),
     );
